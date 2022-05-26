@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CEO Works</title>
+    <link rel="stylesheet" href="users.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <script
+      src="https://kit.fontawesome.com/5289cbe406.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Side Nav bar -->
+    <div class="sidenav">
+      <div id="home"><p class="home-text">Home</p></div>
+    </div>
+
+    <!-- Header -->
+    
+    <div class="logo"></div>
+    <div class="profile"></div>
+    <span class="profile-name">Super Admin</span>
+
+    <!-- Lines -->
+    <span><hr id="rectangle" /></span>
+    <span><hr id="rectangle2" /></span>
+
+    <!-- Buttons -->
+    <ul class="nav nav-tabs">
+      <li class="active superAdmin"><a class="text-decoration-none" data-toggle="tab" href="#super"><p class="super">Super Admin</p></a></li>
+      <li class="companies"><a class="text-decoration-none" data-toggle="tab" onclick="companies()" href="#companies"><p class="com-text">Companies</p></a></li>
+      <li class="users"><a class="text-decoration-none" data-toggle="tab" onclick="users()" href="#users"><p class="user-text">Users</p></a></li>
+      <li class="project"><a class="text-decoration-none" data-toggle="tab" onclick="projects()" href="#projects"><p class="project-text">Projects</p></a></li>
+      <li class="create-company"><a class="text-decoration-none" data-toggle="tab" href="#company"><p class="company-text">Create New Company</p></a></li>
+    </ul>
+    <!-- search-box -->
+    <div class="search">
+      <input type="search" class="form-control" placeholder="Search Company" aria-label="Search">
+      
+      <span class="search-icon"></span>
+    </div>
+
+    <!-- Table -->
+    <div class="table-company">
+                <div class="table">
+                    <div class="table-header">
+                        <div class="header__item "><span id="name" class="filter__link sortable">Company</span></div>
+                        <div class="header__item"><span id="name" class="filter__link">Full Name</span></div>
+                        <div class="header__item"><span id="name" class="filter__link">Email</span></div>
+                        <div class="header__item"><span id="name" class="filter__link sortable">User Type</span></div>
+                        <div class="header__item"><span id="name" class="filter__link sortable">Status</span></div>
+                    </div>
+                    <div class="table-content">	
+                        <div class="table-row">		
+                            <div class="table-data">BPEA</div>
+                            <div class="table-data">Johnson</div>
+                            <div class="table-data">johnson@bpeaasia.com</div>
+                            <div class="table-data">Client Admin</div>
+                            <div class="table-data"><span class="status">Active</span>
+                                <span class="edit-more"><a href="#edit" class="edit" data-toggle="modal"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"  class="bi bi-pencil" viewBox="0 0 16 16">
+                                    <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                                  </svg></a>
+                                  <a style="margin-left: 12px;" href="#moreOptions" class="edit" data-toggle="modal"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"  class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                     <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                                  </svg></a></span>
+                            </div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-data">BPEA</div>
+                            <div class="table-data">Steve Boehm</div>
+                            <div class="table-data">steve@bpeasia.com</div>
+                            <div class="table-data">Standard User</div>
+                            <div class="table-data"><span class="status">Active</span>
+                                <span class="edit-more"><a href="#edit" class="edit" data-toggle="modal"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"  class="bi bi-pencil" viewBox="0 0 16 16">
+                                    <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                                  </svg></a>
+                                  <a style="margin-left: 12px;" href="#moreOptions" class="edit" data-toggle="modal"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"  class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                     <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                                  </svg></a></span>
+                            </div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-data">Wipro</div>
+                            <div class="table-data">Vijai</div>
+                            <div class="table-data">vijai@wipro.com</div>
+                            <div class="table-data">Standard User</div>
+                            <div class="table-data"><span class="status">Active</span>
+                                <span class="edit-more"><a href="#edit" class="edit" data-toggle="modal"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"  class="bi bi-pencil" viewBox="0 0 16 16">
+                                    <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                                  </svg></a>
+                                  <a style="margin-left: 12px;" href="#moreOptions" class="edit" data-toggle="modal"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"  class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                     <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                                  </svg></a></span>
+                            </div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-data">TCS</div>
+                            <div class="table-data">Muruli</div>
+                            <div class="table-data">muruli@tcs.com</div>
+                            <div class="table-data">Standard User</div>
+                            <div class="table-data"><span class="status">Active</span>
+                                <span class="edit-more"><a href="#edit" class="edit" data-toggle="modal"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"  class="bi bi-pencil" viewBox="0 0 16 16">
+                                    <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                                  </svg></a>
+                                  <a style="margin-left: 12px;" href="#moreOptions" class="edit" data-toggle="modal"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"  class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                     <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                                  </svg></a></span>
+                            </div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-data">Prometric</div>
+                            <div class="table-data">Prajwal</div>
+                            <div class="table-data">prajwal@prometric.com</div>
+                            <div class="table-data">Standard User</div>
+                            <div class="table-data"><span class="status">Active</span>
+                                <span class="edit-more"><a href="#edit" class="edit" data-toggle="modal"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"  class="bi bi-pencil" viewBox="0 0 16 16">
+                                    <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                                  </svg></a>
+                                  <a style="margin-left: 12px;" href="#moreOptions" class="edit" data-toggle="modal"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"  class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                     <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                                  </svg></a></span>
+                            </div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-data">Virtusa</div>
+                            <div class="table-data">Akash</div>
+                            <div class="table-data">Akash@bvirtusa.com</div>
+                            <div class="table-data">Standard User</div>
+                            <div class="table-data"><span class="status">Active</span>
+                                <span class="edit-more"><a href="#edit" class="edit" data-toggle="modal"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"  class="bi bi-pencil" viewBox="0 0 16 16">
+                                    <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                                  </svg></a>
+                                  <a style="margin-left: 12px;" href="#moreOptions" class="edit" data-toggle="modal"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"  class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                     <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                                  </svg></a></span>
+                            </div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-data">Virtusa</div>
+                            <div class="table-data">Vijai</div>
+                            <div class="table-data">vijai@virtusa.com</div>
+                            <div class="table-data">Standard User</div>
+                            <div class="table-data"><span class="status">Active</span>
+                                <span class="edit-more"><a href="#edit" class="edit" data-toggle="modal"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"  class="bi bi-pencil" viewBox="0 0 16 16">
+                                    <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                                  </svg></a>
+                                  <a style="margin-left: 12px;" href="#moreOptions" class="edit" data-toggle="modal"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"  class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                     <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                                  </svg></a></span>
+                            </div>
+                        </div>
+                    </div>	
+                </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>
